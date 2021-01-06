@@ -8,22 +8,23 @@
 import UIKit
 
 class MakeBetViewController: UIViewController {
-    
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    private let storage = Storage()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let cellNib = UINib(nibName: "MakeBetTableViewCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "MakeBetTableViewCell")
-    }
-
-    @IBAction func logoutAction(_ sender: UIBarButtonItem) {
-    }
-    
+     
+     @IBOutlet weak var tableView: UITableView!
+     @IBOutlet weak var titleLabel: UILabel!
+     var currentSystemUser: RegularUser!
+     
+     private let storage = Storage()
+     
+     override func viewDidLoad() {
+          super.viewDidLoad()
+          
+          let cellNib = UINib(nibName: "MakeBetTableViewCell", bundle: nil)
+          tableView.register(cellNib, forCellReuseIdentifier: "MakeBetTableViewCell")
+     }
+     
+     @IBAction func logoutAction(_ sender: UIBarButtonItem) {
+     }
+     
 }
 
 // MARK: - UITableViewDataSource
@@ -49,4 +50,11 @@ extension MakeBetViewController: UITableViewDelegate {
         return 56
     }
     
+}
+
+extension MakeBetViewController {
+     func placeBet(_ bet: Bet) {
+          currentSystemUser.placeBet(currentSystemUser.username, bet)
+          print("2")
+     }
 }

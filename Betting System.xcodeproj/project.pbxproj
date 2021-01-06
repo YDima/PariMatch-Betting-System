@@ -17,7 +17,6 @@
 		649F0C3325A5C05E00FD8D92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649F0C3025A5C05E00FD8D92 /* Main.storyboard */; };
 		649F0C3825A5C10700FD8D92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F0C3525A5C10700FD8D92 /* AppDelegate.swift */; };
 		649F0C3925A5C10700FD8D92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F0C3625A5C10700FD8D92 /* SceneDelegate.swift */; };
-		649F0C3A25A5C10700FD8D92 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649F0C3725A5C10700FD8D92 /* Info.plist */; };
 		649F0C3D25A5C12700FD8D92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 649F0C3C25A5C12700FD8D92 /* Assets.xcassets */; };
 		649F0C5325A5C1DE00FD8D92 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F0C4725A5C1DE00FD8D92 /* AdminViewController.swift */; };
 		649F0C5425A5C1DE00FD8D92 /* AdminBanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F0C4925A5C1DE00FD8D92 /* AdminBanTableViewCell.swift */; };
@@ -253,7 +252,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				649F0C3A25A5C10700FD8D92 /* Info.plist in Resources */,
 				649F0C3325A5C05E00FD8D92 /* Main.storyboard in Resources */,
 				649F0C7025A5C46E00FD8D92 /* MakeBetTableViewCell.xib in Resources */,
 				6499FFDF25A3A4F5008E69A2 /* README.md in Resources */,

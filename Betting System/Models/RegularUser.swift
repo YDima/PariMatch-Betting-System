@@ -8,7 +8,7 @@
 import UIKit
 
 protocol RegularUserProtocol {
-     func placeBet(bet: Bet)
+     func placeBet(_ username: String, _ bet: Bet)
      
      func viewAllUserBets()
 }
@@ -17,18 +17,18 @@ class RegularUser: User, RegularUserProtocol {
 
      private var bets: [Bet] = []
      private var storage = Storage()
-    var currentUser: User
 
      override init(username: String, password: String, role: Role = .regular, state: State) {
           super.init(username: username, password: password, role: role, state: state)
      }
 
-     func placeBet(bet: Bet) {
-        bets.append(bet)
-        storage.addBetsToUser( currentUser: currentUser, bets: bets)
+     func placeBet(_ username: String, _ bet: Bet) {
+          bets.append(bet)
+          storage.addBetsToUser(username: username, bets: bets)
+          print("3")
      }
-
+     
      func viewAllUserBets() {
-        storage.viewAllUserBets()
+          storage.viewAllUserBets()
      }
 }

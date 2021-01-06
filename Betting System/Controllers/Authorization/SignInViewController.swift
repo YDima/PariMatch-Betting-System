@@ -20,6 +20,8 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInAction(_ sender: UIButton) {
+          let VC = MakeBetViewController()
+          VC.currentSystemUser = RegularUser(username: "New", password: "New", state: .authorized)
     }
     
     @IBAction func dontHaveAccountAction(_ sender: UIButton) {

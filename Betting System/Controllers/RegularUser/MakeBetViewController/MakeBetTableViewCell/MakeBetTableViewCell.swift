@@ -9,9 +9,10 @@ import UIKit
 
 class MakeBetTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var betDescriptionLabel: UILabel!
-    @IBOutlet weak var makeBetButton: UIButton!
-    
+     @IBOutlet weak var betDescriptionLabel: UILabel!
+     @IBOutlet weak var makeBetButton: UIButton!
+     var makeBetViewController = MakeBetViewController()
+     
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //        // Initialization code
@@ -23,7 +24,9 @@ class MakeBetTableViewCell: UITableViewCell {
 //        // Configure the view for the selected state
 //    }
     
-    @IBAction func makeBetAction(_ sender: UIButton) {
-        print("make bet")
+    @IBAction func makeBetAction(_ sender: UIButton) throws {
+          let bet = Bet(name: betDescriptionLabel.text!)
+          makeBetViewController.placeBet(bet)
+          print("1")
     }
 }

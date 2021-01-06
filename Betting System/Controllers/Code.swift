@@ -49,15 +49,6 @@ class Authorization: AuthorizationProtocol {
      
 }
 
-struct Bet {
-     var value: String
-}
-
-struct Storage {
-     var users: [User] = []
-     var bets: [String: [Bet]] = [:]
-}
-
 class BettingSystem {
      private var authorization = Authorization()
      private var storage = Storage()

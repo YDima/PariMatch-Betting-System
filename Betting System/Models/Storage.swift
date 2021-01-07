@@ -28,7 +28,6 @@ class Storage {
 extension Storage {
      func addBetsToUser(username: String, bets: [Bet]) {
           userBets.updateValue(bets, forKey: username)
-          print("4")
      }
 
      func viewAllUserBets() {

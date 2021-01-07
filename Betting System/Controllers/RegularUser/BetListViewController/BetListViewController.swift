@@ -14,35 +14,38 @@ import UIKit
 // ------------------------------------------------------------------------------------
 
 class BetListViewController: UIViewController {
-    
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    private let storage = Storage()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
-    }
-    
-    @IBAction func logoutAction(_ sender: UIBarButtonItem) {
-    }
-    
+     
+     @IBOutlet weak var tableView: UITableView!
+     @IBOutlet weak var titleLabel: UILabel!
+     
+     fileprivate var storage = Storage() {
+          didSet {
+               tableView.reloadData()
+          }
+     }
+     
+     override func viewDidLoad() {
+          super.viewDidLoad()
+          
+     }
+     
+     @IBAction func logoutAction(_ sender: UIBarButtonItem) {
+     }
+     
 }
 
 // MARK: - UITableViewDataSource
 extension BetListViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return storage.bets.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BetTableViewCell", for: indexPath)
-        cell.textLabel?.text = storage.bets[indexPath.row].name
-        
-        return cell
-    }
-    
+     
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+          return storage.userBets.count
+     }
+     
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+          let cell = tableView.dequeueReusableCell(withIdentifier: "BetTableViewCell", for: indexPath)
+          cell.textLabel?.text = storage.bets[indexPath.row].name
+          
+          return cell
+     }
+     
 }

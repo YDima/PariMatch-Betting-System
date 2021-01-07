@@ -11,7 +11,7 @@ class MakeBetViewController: UIViewController {
      
      @IBOutlet weak var tableView: UITableView!
      @IBOutlet weak var titleLabel: UILabel!
-     var currentSystemUser: RegularUser!
+     var currentSystemUser = RegularUser(username: "New", password: "New", state: .authorized)
      
      private let storage = Storage()
      
@@ -55,6 +55,5 @@ extension MakeBetViewController: UITableViewDelegate {
 extension MakeBetViewController {
      func placeBet(_ bet: Bet) {
           currentSystemUser.placeBet(currentSystemUser.username, bet)
-          print("2")
      }
 }

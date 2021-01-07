@@ -25,7 +25,6 @@ class RegularUser: User, RegularUserProtocol {
      func placeBet(_ username: String, _ bet: Bet) {
           bets.append(bet)
           storage.addBetsToUser(username: username, bets: bets)
-          print("3")
      }
      
      func viewAllUserBets() {

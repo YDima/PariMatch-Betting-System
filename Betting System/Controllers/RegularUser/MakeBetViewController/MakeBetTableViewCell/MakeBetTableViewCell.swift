@@ -24,9 +24,8 @@ class MakeBetTableViewCell: UITableViewCell {
 //        // Configure the view for the selected state
 //    }
     
-    @IBAction func makeBetAction(_ sender: UIButton) throws {
+    @IBAction func makeBetAction(_ sender: UIButton) {
           let bet = Bet(name: betDescriptionLabel.text!)
           makeBetViewController.placeBet(bet)
-          print("1")
     }
 }

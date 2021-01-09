@@ -29,6 +29,7 @@
 		649F0C7025A5C46E00FD8D92 /* MakeBetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 649F0C6D25A5C46E00FD8D92 /* MakeBetTableViewCell.xib */; };
 		649F0C7125A5C46E00FD8D92 /* MakeBetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F0C6E25A5C46E00FD8D92 /* MakeBetTableViewCell.swift */; };
 		649F0C7225A5C46E00FD8D92 /* MakeBetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F0C6F25A5C46E00FD8D92 /* MakeBetViewController.swift */; };
+		C1422DD925A77328003D6147 /* autorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1422DD825A77328003D6147 /* autorization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		649F0C6D25A5C46E00FD8D92 /* MakeBetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeBetTableViewCell.xib; sourceTree = "<group>"; };
 		649F0C6E25A5C46E00FD8D92 /* MakeBetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeBetTableViewCell.swift; sourceTree = "<group>"; };
 		649F0C6F25A5C46E00FD8D92 /* MakeBetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeBetViewController.swift; sourceTree = "<group>"; };
+		C1422DD825A77328003D6147 /* autorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autorization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				649F0C2425A5C04700FD8D92 /* RegularUser.swift */,
 				649F0C2525A5C04700FD8D92 /* Admin.swift */,
 				649F0C2625A5C04700FD8D92 /* User.swift */,
+				C1422DD825A77328003D6147 /* autorization.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				649F0C7125A5C46E00FD8D92 /* MakeBetTableViewCell.swift in Sources */,
 				649F0C5325A5C1DE00FD8D92 /* AdminViewController.swift in Sources */,
+				C1422DD925A77328003D6147 /* autorization.swift in Sources */,
 				649F0C3825A5C10700FD8D92 /* AppDelegate.swift in Sources */,
 				649F0C6725A5C26600FD8D92 /* BetListViewController.swift in Sources */,
 				649F0C5425A5C1DE00FD8D92 /* AdminBanTableViewCell.swift in Sources */,

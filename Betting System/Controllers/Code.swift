@@ -7,47 +7,47 @@
 
 import UIKit
 
-protocol AuthorizationProtocol {
-     func login(_ username: String, _ password: String)
-     func register(_ username: String, _ password: String, _ role: User.Role)
-     func logout()
-}
-
-class Authorization: AuthorizationProtocol {
-     
-     func register(_ username: String, _ password: String, _ role: User.Role) {
-          
-     }
-     
-     func login(_ username: String, _ password: String) {
-          
-     }
-
-     func logout() {
-          
-     }
-     // private extension
-     func isNew(username: String) -> Bool {
-          return true
-     }
-     
-     func checkPassword(user: User, password: String) -> Bool {
-          return true
-     }
-     
-     func editUserState(user: User, newState: State) -> User {
-          return user
-     }
-     
-     func authorize(user: User) throws {
-          
-     }
-     
-     func otherUserInTheSystem() -> Bool{
-          return true
-     }
-     
-}
+//protocol AuthorizationProtocol {
+//     func login(_ username: String, _ password: String)
+//     func register(_ username: String, _ password: String, _ role: User.Role)
+//     func logout()
+//}
+//
+//class Authorization: AuthorizationProtocol {
+//     
+//     func register(_ username: String, _ password: String, _ role: User.Role) {
+//          
+//     }
+//     
+//     func login(_ username: String, _ password: String) {
+//          
+//     }
+//
+//     func logout() {
+//          
+//     }
+//     // private extension
+//     func isNew(username: String) -> Bool {
+//          return true
+//     }
+//     
+//     func checkPassword(user: User, password: String) -> Bool {
+//          return true
+//     }
+//     
+//     func editUserState(user: User, newState: State) -> User {
+//          return user
+//     }
+//     
+//     func authorize(user: User) throws {
+//          
+//     }
+//     
+//     func otherUserInTheSystem() -> Bool{
+//          return true
+//     }
+//     
+//}
 
 class BettingSystem {
      private var authorization = Authorization()

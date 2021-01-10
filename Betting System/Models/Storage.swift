@@ -67,3 +67,15 @@ extension Storage {
     }
     
 }
+
+//MARK: - Registration
+extension Storage {
+    
+    func addNewUser(user: User) {
+        users[user.username] = user
+    }
+    
+    func isUserExist(username: String) -> Bool {
+        users[username] != nil
+    }
+}

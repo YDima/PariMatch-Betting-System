@@ -25,6 +25,10 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func dontHaveAccountAction(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Registration") as! SignUpViewController
+        newViewController.modalPresentationStyle = .fullScreen
+        present(newViewController, animated: true, completion: nil)
     }
     
 }

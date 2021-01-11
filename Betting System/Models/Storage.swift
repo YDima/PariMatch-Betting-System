@@ -22,7 +22,9 @@ class Storage {
         bets.append(Bet(name: "bet6"))
         bets.append(Bet(name: "bet7"))
     }
-    
+}
+//MARK: - Authorization
+extension Storage{
     func isBanned(name: String) -> Bool {
         return users[name]?.state == .banned
     }

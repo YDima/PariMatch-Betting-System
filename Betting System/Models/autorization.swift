@@ -19,10 +19,10 @@ enum AuthorizationError: Error {
 }
 
 class Authorization: AuthorizationProtocol {
-    private var activeUser: User?
+    private var activeUserName: String?
     private var storage: Storage
     init(_ autorizationStorage: Storage) {
-        activeUser = nil
+        activeUserName = nil
         storage = autorizationStorage
     }
     
@@ -30,39 +30,36 @@ class Authorization: AuthorizationProtocol {
         guard !self.otherUserInTheSystem() else {
             throw AuthorizationError.UserLoggedIn
         }
-        guard !self.storage.isBanned(username) else{
+        guard !self.storage.isBanned(name: username) else{
             throw AuthorizationError.UserBanned
         }
-        guard !self.storage.checkUser(username, password) else{
+        guard !self.storage.checkUser(name: username, password: password) else{
             throw AuthorizationError.WrongPassword
         }
-        self.authorize(user: self.storage.findUser(username, password))
+        self.authorize(name: username)
      }
 
      func logout() {
-        self.editUserState(user: &activeUser, newState: .unauthorized)
-        activeUser = nil;
+        self.editUserState(name: activeUserName, newState: .unauthorized)
+        activeUserName = nil;
      }
 }
 
 private extension Authorization {
     
-    func editUserState( user: inout User?, newState: State){
-        if(user == nil) {
+    func editUserState(name: String?, newState: State){
+        if(name == nil) {
             return
         }
-        user!.state = newState;
+        self.storage.editUserState(name: name!, newState: newState)
      }
      
-    func authorize( user: inout User?) throws {
-        editUserState(user: &user, newState: .authorized)
-        activeUser = user
+    func authorize(name: String){
+        editUserState(name: name, newState: .authorized)
+        activeUserName = name
      }
      
      func otherUserInTheSystem() -> Bool{
-        if activeUser != nil  {
-            return true
-        }
-        return false
+        activeUserName != nil
      }
 }

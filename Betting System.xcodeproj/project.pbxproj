@@ -30,6 +30,7 @@
 		649F0C7125A5C46E00FD8D92 /* MakeBetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F0C6E25A5C46E00FD8D92 /* MakeBetTableViewCell.swift */; };
 		649F0C7225A5C46E00FD8D92 /* MakeBetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F0C6F25A5C46E00FD8D92 /* MakeBetViewController.swift */; };
 		C1422DD925A77328003D6147 /* autorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1422DD825A77328003D6147 /* autorization.swift */; };
+		C1A2033525AC82E0003EC5E5 /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A2033425AC82E0003EC5E5 /* registration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		649F0C6E25A5C46E00FD8D92 /* MakeBetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeBetTableViewCell.swift; sourceTree = "<group>"; };
 		649F0C6F25A5C46E00FD8D92 /* MakeBetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeBetViewController.swift; sourceTree = "<group>"; };
 		C1422DD825A77328003D6147 /* autorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autorization.swift; sourceTree = "<group>"; };
+		C1A2033425AC82E0003EC5E5 /* registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				649F0C2225A5C04700FD8D92 /* Storage.swift */,
+				C1A2033425AC82E0003EC5E5 /* registration.swift */,
 				649F0C2325A5C04700FD8D92 /* Bet.swift */,
 				649F0C2425A5C04700FD8D92 /* RegularUser.swift */,
 				649F0C2525A5C04700FD8D92 /* Admin.swift */,
@@ -279,6 +282,7 @@
 				649F0C5425A5C1DE00FD8D92 /* AdminBanTableViewCell.swift in Sources */,
 				649F0C3925A5C10700FD8D92 /* SceneDelegate.swift in Sources */,
 				649F0C2725A5C04700FD8D92 /* Storage.swift in Sources */,
+				C1A2033525AC82E0003EC5E5 /* registration.swift in Sources */,
 				649F0C2925A5C04700FD8D92 /* RegularUser.swift in Sources */,
 				649F0C5825A5C1DE00FD8D92 /* SignInViewController.swift in Sources */,
 				649F0C5725A5C1DE00FD8D92 /* SignUpViewController.swift in Sources */,

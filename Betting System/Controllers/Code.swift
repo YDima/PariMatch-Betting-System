@@ -49,12 +49,12 @@ import UIKit
 //     
 //}
 
-class BettingSystem {
-     private var authorization = Authorization()
-     private var storage = Storage()
-     
-     func login(username: String, password: String) {
-          authorization.login(username, password)
-     }
-     
-}
+//class BettingSystem {
+//     private var authorization = Authorization()
+//     private var storage = Storage()
+//
+//     func login(username: String, password: String) {
+//          authorization.login(username, password)
+//     }
+//
+//}

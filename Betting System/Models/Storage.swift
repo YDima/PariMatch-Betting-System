@@ -44,7 +44,17 @@ extension Storage{
         self.users[name]?.state = newState
     }
 }
-
+//MARK: - Registration
+extension Storage {
+    
+    func addNewUser(user: User) {
+        users[user.username] = user
+    }
+    
+    func isUserExist(username: String) -> Bool {
+        users[username] != nil
+    }
+}
 //MARK: - RegularUser
 extension Storage {
      func addBetsToUser(username: String, bets: [Bet]) {

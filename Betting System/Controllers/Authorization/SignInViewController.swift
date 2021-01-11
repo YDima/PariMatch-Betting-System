@@ -20,11 +20,36 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInAction(_ sender: UIButton) {
-          let VC = MakeBetViewController()
-          VC.currentSystemUser = RegularUser(username: "New", password: "New", state: .authorized)
+        let username = usernameTextField.text
+        let password = passwordTextField.text
+        do{
+            try 
+        }
+        
+        
     }
     
     @IBAction func dontHaveAccountAction(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Registration") as! SignUpViewController
+        newViewController.modalPresentationStyle = .fullScreen
+        present(newViewController, animated: true, completion: nil)
     }
     
+}
+extension SignInViewController{
+    func switchVC(role: Role){
+        if(role == .admin){
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Admin") as! AdminViewController
+            newViewController.modalPresentationStyle = .fullScreen
+            present(newViewController, animated: true, completion: nil)
+        }
+        else{
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "RegularUser") as! RegularUserViewController
+            newViewController.modalPresentationStyle = .fullScreen
+            present(newViewController, animated: true, completion: nil)
+        }
+    }
 }
